@@ -1,6 +1,6 @@
 import { Body, Controller, Get, HttpStatus, Param, Post, Query, Redirect, Res } from '@nestjs/common';
-import { UrlDto } from 'src/dtos/urls.dto';
-import { UrlsService } from 'src/services/urls.service';
+import { UrlDto } from '../dtos/urls.dto';
+import { UrlsService } from '../services/urls.service';
 import { RequestContext } from 'nestjs-request-context';
 
 @Controller()

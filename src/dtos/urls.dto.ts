@@ -4,7 +4,7 @@ import {
   } from 'class-validator';
 export class UrlDto {
   
-  readonly id: number;
+  readonly id?: number;
 
   @IsUrl({ require_tld: false})
   @IsNotEmpty()

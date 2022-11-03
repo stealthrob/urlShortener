@@ -3,7 +3,7 @@ import { UrlDto } from 'src/dtos/urls.dto';
 import * as lowdb from 'lowdb';
 import * as FileAsync from 'lowdb/adapters/FileAsync';
 import {map,max} from 'lodash'
-import { Url } from 'src/entities/url.entity';
+import { Url } from 'src/database/entities/url.entity';
 
 type CollctionName = 'urls';
 const _alphabet = '23456789bcdfghjkmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ-_',
