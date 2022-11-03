@@ -8,6 +8,9 @@ import {RequestContextModule} from 'nestjs-request-context'
 @Module({
   imports: [
     RequestContextModule,
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'client/dist'), // New
+    }), // New
   ],
  controllers: [ UrlsController],
  providers: [ UrlsService],
