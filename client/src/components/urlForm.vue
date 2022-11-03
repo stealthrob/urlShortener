@@ -14,7 +14,6 @@
 </template>
 <script>
 import axios from "axios";
-import { server } from "../utils/helper";
 export default {
     data() {
         return {
@@ -26,7 +25,9 @@ export default {
         handleSubmit() {
 
             const url = this.redirectUrl;
-            axios.post(`${server.baseURL}/`, {redirectUrl:url}).then(data => {
+            const host = window.location.href;
+            console.log('The host: '+host);
+            axios.post(`${host}`, {redirectUrl:url}).then(data => {
                 this.shortenUrl = data.data;
             });
         }
