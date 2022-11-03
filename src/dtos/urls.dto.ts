@@ -6,7 +6,7 @@ export class UrlDto {
   
   readonly id: number;
 
-  @IsUrl({ require_tld: false })
+  @IsUrl({ require_tld: false})
    @IsNotEmpty()
   readonly redirectUrl: string;
 

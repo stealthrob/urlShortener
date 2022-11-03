@@ -1,18 +1,15 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { ServeStaticModule} from '@nestjs/serve-static'; // New
 import { join } from 'path'; // New
 import { UrlsController } from './controllers/urls.controller';
 import { UrlsService } from './services/urls.service';
+import {RequestContextModule} from 'nestjs-request-context'
 
 @Module({
   imports: [
-    ServeStaticModule.forRoot({ // New
-      rootPath: join(__dirname, '..', 'client/dist'), // New
-    }), // New
+    RequestContextModule,
   ],
- controllers: [AppController, UrlsController],
- providers: [AppService, UrlsService],
+ controllers: [ UrlsController],
+ providers: [ UrlsService],
 })
 export class AppModule {}
