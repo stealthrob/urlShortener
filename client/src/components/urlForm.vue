@@ -25,11 +25,9 @@ export default {
     methods: {
         handleSubmit() {
 
-            console.log(`paso 1 ${this.redirectUrl}`)
             const url = this.redirectUrl;
             axios.post(`${server.baseURL}/`, {redirectUrl:url}).then(data => {
-                this.shortenUrl = data.data.shortenUrl;
-                console.log(`paso 2 ${this.shortenUrl}`)
+                this.shortenUrl = data.data;
             });
         }
     }
