@@ -8,6 +8,7 @@ async function bootstrap() {
     new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true }),
   );
   const port: number = parseInt(`${process.env.PORT}`) || 3000;
-await app.listen(port);
+  app.enableCors();
+  await app.listen(port);
 }
 bootstrap();
