@@ -16,6 +16,8 @@ export class UrlsController {
 
   @Get(':urlId')
   async getUrlDtoById(@Param('urlId') urlId: string,@Res() res,): Promise<any> {
+    if(!urlId)
+    return
    const urlDto:UrlDto = await this.urlsService.findOne(urlId);
   return res.redirect(urlDto.redirectUrl);
   }

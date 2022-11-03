@@ -9,7 +9,7 @@ import {RequestContextModule} from 'nestjs-request-context'
   imports: [
     RequestContextModule,
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'client/dist'), // New
+      rootPath: join(__dirname, '..', 'client/dist'),
     }), // New
   ],
  controllers: [ UrlsController],
