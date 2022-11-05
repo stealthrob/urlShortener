@@ -33,7 +33,7 @@ Extra Resources:
 -----------
    - [Postman Collection](https://app.getpostman.com/join-team?invite_code=89b0e34e299c1d94ba1d893935a83cf7&target_code=22b4d82fddaec84ab635d9f6a4d07c83)
 
-   - [App Online](https://app.getpostman.com/join-team?invite_code=89b0e34e299c1d94ba1d893935a83cf7&target_code=22b4d82fddaec84ab635d9f6a4d07c83)
+   - [App Online](https://short-url-rn.herokuapp.com/)
 
 Future Work:
 -----------
